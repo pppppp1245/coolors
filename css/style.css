@@ -13,6 +13,19 @@
   padding: 0 40px;
 }
 
+/* ========== Ads ========== */
+.footer-ad,
+.top-ad {
+  width: 100%;
+  max-width: 728px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.footer-ad {
+  margin-bottom: 20px;
+}
+
 /* ========== Header ========== */
 .header {
   position: fixed;
@@ -801,6 +814,12 @@
 
   .cta__title {
     font-size: 2.5rem;
+  }
+
+  .footer-ad,
+  .top-ad {
+    max-width: 100%;
+    margin: 32px 20px;
   }
 }
 
