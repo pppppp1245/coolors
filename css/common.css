@@ -184,6 +184,18 @@ button {
   margin-bottom: 48px;
 }
 
+.footer-ad,
+.top-ad {
+  width: 100%;
+  max-width: 728px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.footer-ad {
+  margin-bottom: 20px;
+}
+
 @media (max-width: 1200px) {
   .page-ad {
     max-width: 100%;
