@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UI Preview — Preview Colors in Real UI</title>
+  <meta name="description" content="Preview your color palette in real UI components.">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/ui-preview.css">
+
+  <!-- Chillax Font -->
+  <link href="https://api.fontshare.com/v2/css?f[]=chillax@300,400,500,600,700&display=swap" rel="stylesheet">
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <!-- ================== 기본 메타 태그 (SEO) ================== -->
+  <meta name="title" content="Real-time UI Color Preview | Dalox">
+  <meta name="description" content="Test your color palettes on real UI components like buttons, cards, and navbars with Dalox UI Preview.">
+  <meta name="keywords" content="UI preview, color testing, dalox, UI design components">
+  <meta name="author" content="Dalox">
+  <meta name="robots" content="index, follow">
+
+  <!-- ================== Open Graph 메타 태그 (SNS 공유) ================== -->
+  <meta property="og:title" content="Real-time UI Color Preview | Dalox">
+  <meta property="og:description" content="Test your color palettes on real UI components with Dalox.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dalox.design/subpage/ui-preview.html">
+  <meta property="og:image" content="../images/icon/DR.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="Dalox">
+  <meta property="og:locale" content="ko_KR">
+
+  <!-- ================== Twitter 카드 메타 태그 ================== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Real-time UI Color Preview | Dalox">
+  <meta name="twitter:description" content="Test your color palettes on real UI components with Dalox.">
+  <meta name="twitter:image" content="../images/icon/DR.png">
+
+  <!-- ================== SEO 및 사용자 경험 보완 태그 ================== -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="language" content="ko">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="canonical" href="https://dalox.design/subpage/ui-preview.html">
+
+  <!-- ================== 웹앱 및 브라우저 최적화 ================== -->
+  <meta name="theme-color" content="#000000">
+  <meta name="application-name" content="Dalox">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <!-- ================== 아이콘 및 리소스 링크 ================== -->
+  <link rel="icon" href="../images/icon/DR.png" type="image/png">
+  <link rel="apple-touch-icon" href="../images/icon/DR.png">
+  <link rel="manifest" href="../site.webmanifest">
+</head>
+
+<body>
+
+  <!-- ========== Header ========== -->
+  <header class="header">
+    <div class="header__container">
+      <a href="../index.html" class="header__logo">DALOX</a>
+      <nav class="header__nav">
+        <a href="../subpage/generator.html" class="header__link">Generator</a>
+        <a href="../subpage/image-analyzer.html" class="header__link">Image Analyzer</a>
+        <a href="../subpage/color-library.html" class="header__link">Color Spectrum</a>
+        <a href="../subpage/color-combinations.html" class="header__link">Color Combinations</a>
+        <a href="../subpage/ui-preview.html" class="header__link header__link--active">UI Preview</a>
+      </nav>
+      <button class="header__menu-toggle" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ========== Mobile Menu ========== -->
+  <div class="mobile-menu">
+    <nav class="mobile-menu__nav">
+      <a href="../subpage/generator.html" class="mobile-menu__link">Generator</a>
+      <a href="../subpage/image-analyzer.html" class="mobile-menu__link">Image Analyzer</a>
+      <a href="../subpage/color-library.html" class="mobile-menu__link">Color Spectrum</a>
+      <a href="../subpage/color-combinations.html" class="mobile-menu__link">Color Combinations</a>
+      <a href="../subpage/ui-preview.html" class="mobile-menu__link">UI Preview</a>
+    </nav>
+  </div>
+
+  <!-- ========== Main ========== -->
+  <main class="ui-preview">
+    <div class="ui-preview__container">
+
+      <!-- Page Header -->
+      <div class="ui-preview__header">
+        <h1 class="ui-preview__title">UI Preview</h1>
+        <p class="ui-preview__subtitle">Preview colors in real UI components</p>
+      </div>
+
+      <!-- Preview Area -->
+      <div class="preview-area">
+
+        <!-- Left Column -->
+        <div class="preview-column">
+          <!-- Color Controls for Buttons & Navigation -->
+          <div class="color-controls">
+            <div class="color-control">
+              <label class="color-control__label">Button Color</label>
+              <div class="color-control__input">
+                <input type="color" id="buttonColor" value="#667eea">
+                <span id="buttonColorValue">#667eea</span>
+              </div>
+            </div>
+            <div class="color-control">
+              <label class="color-control__label">Button Text</label>
+              <div class="color-control__input">
+                <input type="color" id="buttonTextColor" value="#FFFFFF">
+                <span id="buttonTextColorValue">#FFFFFF</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Button Preview -->
+          <div class="preview-section">
+            <h3 class="preview-section__title">Buttons</h3>
+            <div class="preview-section__content">
+              <button class="preview-btn preview-btn--filled">Filled Button</button>
+              <button class="preview-btn preview-btn--outline">Outline Button</button>
+            </div>
+          </div>
+
+          <!-- Navigation Preview -->
+          <div class="preview-section">
+            <h3 class="preview-section__title">Navigation</h3>
+            <div class="preview-section__content">
+              <nav class="preview-nav">
+                <a href="#" class="preview-nav__link preview-nav__link--active">Home</a>
+                <a href="#" class="preview-nav__link">About</a>
+                <a href="#" class="preview-nav__link">Services</a>
+                <a href="#" class="preview-nav__link">Contact</a>
+              </nav>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column -->
+        <div class="preview-column">
+          <!-- Color Controls for Card -->
+          <div class="color-controls">
+            <div class="color-control">
+              <label class="color-control__label">Card Color</label>
+              <div class="color-control__input">
+                <input type="color" id="cardColor" value="#667eea">
+                <span id="cardColorValue">#667eea</span>
+              </div>
+            </div>
+            <div class="color-control">
+              <label class="color-control__label">Card Text</label>
+              <div class="color-control__input">
+                <input type="color" id="cardTextColor" value="#FFFFFF">
+                <span id="cardTextColorValue">#FFFFFF</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card Preview -->
+          <div class="preview-section">
+            <h3 class="preview-section__title">Card</h3>
+            <div class="preview-section__content">
+              <div class="preview-card">
+                <div class="preview-card__icon">★</div>
+                <h4 class="preview-card__title">Feature Title</h4>
+                <p class="preview-card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Input Preview -->
+          <div class="preview-section">
+            <h3 class="preview-section__title">Input</h3>
+            <div class="preview-section__content">
+              <input type="text" class="preview-input" placeholder="Enter your text...">
+            </div>
+          </div>
+
+          <!-- Toggle Preview -->
+          <div class="preview-section">
+            <h3 class="preview-section__title">Toggle</h3>
+            <div class="preview-section__content">
+              <label class="preview-toggle">
+                <input type="checkbox" class="preview-toggle__input">
+                <span class="preview-toggle__slider"></span>
+                <span class="preview-toggle__label">Enable feature</span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- JavaScript -->
+  <script src="../js/ui-preview.js"></script>
+  <!-- ========== Footer ========== -->
+  <footer class="footer">
+    <div class="footer__container">
+      <div class="footer__content">
+        <div class="footer__brand">
+          <span class="footer__logo">DALOX</span>
+          <p class="footer__tagline">Modern color tools for creators</p>
+        </div>
+        <div class="footer__links">
+          <a href="../subpage/generator.html" class="footer__link">Generator</a>
+          <a href="../subpage/image-analyzer.html" class="footer__link">Image Analyzer</a>
+          <a href="../subpage/color-library.html" class="footer__link">Color Spectrum</a>
+          <a href="../subpage/color-combinations.html" class="footer__link">Color Combinations</a>
+          <a href="../subpage/ui-preview.html" class="footer__link">UI Preview</a>
+        </div>
+        <div class="footer__legal">
+          <a href="#" class="footer__link" id="privacyBtn">Privacy Policy</a>
+          <a href="#" class="footer__link" id="termsBtn">Terms of Use</a>
+        </div>
+      </div>
+      <p class="footer__copyright">&copy; 2026 DALOX. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../js/legal-modal.js"></script>
+</body>
+
+</html>

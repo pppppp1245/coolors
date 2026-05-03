@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aura Mood — Semantic Color Generator</title>
+  <meta name="description" content="Generate color palettes based on moods, emotions, and concepts.">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/aura-mood.css">
+
+  <!-- Chillax Font -->
+  <link href="https://api.fontshare.com/v2/css?f[]=chillax@300,400,500,600,700&display=swap" rel="stylesheet">
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <!-- ================== 기본 메타 태그 (SEO) ================== -->
+  <meta name="title" content="Aura Mood Color Generator | Dalox">
+  <meta name="description" content="Generate evocative color palettes based on your mood and keywords with Dalox Aura Mood tool.">
+  <meta name="keywords" content="mood colors, aura colors, color generator, dalox, keyword color generator">
+  <meta name="author" content="Dalox">
+  <meta name="robots" content="index, follow">
+
+  <!-- ================== Open Graph 메타 태그 (SNS 공유) ================== -->
+  <meta property="og:title" content="Aura Mood Color Generator | Dalox">
+  <meta property="og:description" content="Generate evocative color palettes based on your mood with Dalox.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dalox.design/subpage/aura-mood.html">
+  <meta property="og:image" content="../images/icon/DR.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="Dalox">
+  <meta property="og:locale" content="ko_KR">
+
+  <!-- ================== Twitter 카드 메타 태그 ================== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Aura Mood Color Generator | Dalox">
+  <meta name="twitter:description" content="Generate evocative color palettes based on your mood with Dalox.">
+  <meta name="twitter:image" content="../images/icon/DR.png">
+
+  <!-- ================== SEO 및 사용자 경험 보완 태그 ================== -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="language" content="ko">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="canonical" href="https://dalox.design/subpage/aura-mood.html">
+
+  <!-- ================== 웹앱 및 브라우저 최적화 ================== -->
+  <meta name="theme-color" content="#000000">
+  <meta name="application-name" content="Dalox">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+
+  <!-- ================== 아이콘 및 리소스 링크 ================== -->
+  <link rel="icon" href="../images/icon/DR.png" type="image/png">
+  <link rel="apple-touch-icon" href="../images/icon/DR.png">
+  <link rel="manifest" href="../site.webmanifest">
+</head>
+<body>
+
+  <!-- ========== Header ========== -->
+  <header class="header">
+    <div class="header__container">
+      <a href="../index.html" class="header__logo">DALOX</a>
+      <nav class="header__nav">
+        <a href="../subpage/generator.html" class="header__link">Generator</a>
+        <a href="../subpage/image-analyzer.html" class="header__link">Image Analyzer</a>
+        <a href="../subpage/aura-mood.html" class="header__link header__link--active">Aura Mood</a>
+        <a href="../subpage/color-library.html" class="header__link">Color Spectrum</a>
+        <a href="../subpage/color-combinations.html" class="header__link">Color Combinations</a>
+        <a href="../subpage/ui-preview.html" class="header__link">UI Preview</a>
+      </nav>
+      <button class="header__menu-toggle" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ========== Mobile Menu ========== -->
+  <div class="mobile-menu">
+    <nav class="mobile-menu__nav">
+      <a href="../subpage/generator.html" class="mobile-menu__link">Generator</a>
+      <a href="../subpage/image-analyzer.html" class="mobile-menu__link">Image Analyzer</a>
+      <a href="../subpage/aura-mood.html" class="mobile-menu__link">Aura Mood</a>
+      <a href="../subpage/color-library.html" class="mobile-menu__link">Color Spectrum</a>
+      <a href="../subpage/color-combinations.html" class="mobile-menu__link">Color Combinations</a>
+      <a href="../subpage/ui-preview.html" class="mobile-menu__link">UI Preview</a>
+    </nav>
+  </div>
+
+  <!-- ========== Main ========== -->
+  <main class="aura">
+    <div class="aura__container">
+      
+      <!-- Page Header -->
+      <div class="aura__header">
+        <h1 class="aura__title">Aura Mood</h1>
+        <p class="aura__subtitle">What is the color of your mood today?</p>
+      </div>
+
+      <!-- Search Area -->
+      <div class="search-area">
+        <div class="search-box">
+          <input type="text" id="moodInput" placeholder="Enter a mood (e.g. 'Ocean Sunset', 'Cyberpunk', 'Cozy Morning')" aria-label="Mood input">
+          <button id="generateBtn" class="aura__btn">Generate Aura</button>
+        </div>
+        <div class="search-suggestions">
+          <button class="suggestion">Midnight City</button>
+          <button class="suggestion">Forest Mist</button>
+          <button class="suggestion">Electric Dreams</button>
+          <button class="suggestion">Vintage Film</button>
+          <button class="suggestion">Tropical Bliss</button>
+        </div>
+      </div>
+
+      <!-- Result Area -->
+      <div class="result-area" id="resultArea" hidden>
+        <div class="aura-display">
+          <div class="aura-glow" id="auraGlow"></div>
+          <div class="aura-palette" id="auraPalette"></div>
+        </div>
+        <div class="aura-info">
+          <h2 id="auraName">Ocean Sunset</h2>
+          <p id="auraDesc">A serene blend of deep blues and warm oranges.</p>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ========== Footer ========== -->
+  <footer class="footer">
+    <div class="footer__container">
+      <div class="footer__content">
+        <div class="footer__brand">
+          <span class="footer__logo">DALOX</span>
+          <p class="footer__tagline">Modern color tools for creators</p>
+        </div>
+        <div class="footer__links">
+          <a href="../subpage/generator.html" class="footer__link">Generator</a>
+          <a href="../subpage/image-analyzer.html" class="footer__link">Image Analyzer</a>
+          <a href="../subpage/aura-mood.html" class="footer__link">Aura Mood</a>
+          <a href="../subpage/color-library.html" class="footer__link">Color Spectrum</a>
+          <a href="../subpage/color-combinations.html" class="footer__link">Color Combinations</a>
+          <a href="../subpage/ui-preview.html" class="footer__link">UI Preview</a>
+        </div>
+        <div class="footer__legal">
+          <a href="#" class="footer__link" id="privacyBtn">Privacy Policy</a>
+          <a href="#" class="footer__link" id="termsBtn">Terms of Use</a>
+        </div>
+      </div>
+      <p class="footer__copyright">&copy; 2026 DALOX. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="../js/aura-mood.js"></script>
+  <script src="../js/legal-modal.js"></script>
+</body>
+</html>

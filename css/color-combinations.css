@@ -1,0 +1,347 @@
+/* ========================================
+   color-combinations.css — Color Combinations Styles
+   ======================================== */
+
+/* ========== Container ========== */
+.header__container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.color-combinations__container {
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
+/* ========== Header ========== */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--header-height);
+  background: rgba(10, 10, 10, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  z-index: 1000;
+  border-bottom: 1px solid var(--border);
+  transition: all var(--transition-base);
+}
+
+.header__container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: var(--text-primary);
+}
+
+.header__nav {
+  display: flex;
+  gap: 32px;
+}
+
+.header__link {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: color var(--transition-fast);
+  position: relative;
+}
+
+.header__link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transition: width var(--transition-base);
+}
+
+.header__link:hover {
+  color: var(--text-primary);
+}
+
+.header__link:hover::after {
+  width: 100%;
+}
+
+.header__link--active {
+  color: var(--accent);
+}
+
+.header__link--active::after {
+  width: 100%;
+}
+
+.header__menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  width: 28px;
+  cursor: pointer;
+}
+
+.header__menu-toggle span {
+  width: 100%;
+  height: 2px;
+  background: var(--text-primary);
+  transition: all var(--transition-base);
+}
+
+.header__menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.header__menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.header__menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* ========== Mobile Menu ========== */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: var(--bg-primary);
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition-base);
+}
+
+.mobile-menu.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-menu__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  text-align: center;
+}
+
+.mobile-menu__link {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  transition: color var(--transition-fast);
+}
+
+.mobile-menu__link:hover {
+  color: var(--accent);
+}
+
+/* ========== Color Combinations Main ========== */
+.color-combinations {
+  min-height: 100vh;
+  padding-top: calc(var(--header-height) + 80px);
+  padding-bottom: 80px;
+}
+
+.color-combinations__header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.color-combinations__title {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: -1px;
+  margin-bottom: 16px;
+}
+
+.color-combinations__subtitle {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+}
+
+/* ========== Text Input ========== */
+.text-input {
+  max-width: 600px;
+  margin: 0 auto 48px;
+}
+
+.text-input__label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.text-input__field {
+  width: 100%;
+  padding: 16px 20px;
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  background: var(--bg-tertiary);
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  outline: none;
+  transition: all var(--transition-base);
+}
+
+.text-input__field:focus {
+  border-color: var(--accent);
+}
+
+.text-input__field::placeholder {
+  color: var(--text-muted);
+}
+
+/* ========== Combinations Grid ========== */
+.combinations-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 16px;
+  width: 100%;
+}
+
+.combination-card {
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: background-color var(--transition-base), transform var(--transition-base), box-shadow var(--transition-base);
+  position: relative;
+}
+
+.combination-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3);
+}
+
+.combination-card__preview {
+  padding: 40px 24px;
+  min-height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.combination-card__text {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+.combination-card__actions {
+  display: flex;
+  gap: 1px;
+  background: var(--bg-tertiary);
+}
+
+.combination-card__action {
+  flex: 1;
+  padding: 16px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  background: var(--bg-tertiary);
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-align: center;
+}
+
+.combination-card__action:hover {
+  background: var(--bg-secondary);
+}
+
+.combination-card__action--bg {
+  border-right: 1px solid var(--border);
+}
+
+.combination-card__action--text {
+  border-left: 1px solid var(--border);
+}
+
+.combination-card__hex {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.625rem;
+  color: var(--text-secondary);
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 1600px) {
+  .combinations-grid {
+    grid-template-columns: repeat(7, 1fr);
+  }
+}
+
+@media (max-width: 1400px) {
+  .combinations-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+@media (max-width: 1024px) {
+  .combinations-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .header__nav {
+    display: none;
+  }
+
+  .header__menu-toggle {
+    display: flex;
+  }
+
+  .color-combinations__title {
+    font-size: 2rem;
+  }
+
+  .combinations-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .header__container,
+  .color-combinations__container {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .color-combinations__title {
+    font-size: 1.75rem;
+  }
+
+  .combinations-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .combination-card__preview {
+    padding: 32px 24px;
+    min-height: 140px;
+  }
+
+  .combination-card__text {
+    font-size: 1.25rem;
+  }
+}

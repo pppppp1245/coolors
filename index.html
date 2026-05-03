@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DALOX — Color Palette Tool for Designers</title>
+  <meta name="description" content="Modern color palette generator and image analyzer for designers and developers.">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Chillax Font -->
+  <link href="https://api.fontshare.com/v2/css?f[]=chillax@300,400,500,600,700&display=swap" rel="stylesheet">
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <!-- ================== 기본 메타 태그 (SEO) ================== -->
+  <meta name="title" content="Dalox | Modern Color Palette Tools for Creators">
+  <meta name="description" content="Create, analyze, and discover perfect color palettes for your design projects with Dalox. The ultimate tool for modern designers.">
+  <meta name="keywords" content="color, palette, design, generator, image analyzer, dalox, UI design, color schemes, web design tools">
+  <meta name="author" content="Dalox">
+  <meta name="robots" content="index, follow">
+
+  <!-- ================== Open Graph 메타 태그 (SNS 공유) ================== -->
+  <meta property="og:title" content="Dalox | Modern Color Palette Tools for Creators">
+  <meta property="og:description" content="Create, analyze, and discover perfect color palettes for your design projects with Dalox.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dalox.design/index.html">
+  <meta property="og:image" content="images/icon/DR.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Dalox Color Tools">
+  <meta property="og:site_name" content="Dalox">
+  <meta property="og:locale" content="ko_KR">
+
+  <!-- ================== Twitter 카드 메타 태그 ================== -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Dalox | Modern Color Palette Tools for Creators">
+  <meta name="twitter:description" content="Create, analyze, and discover perfect color palettes for your design projects with Dalox.">
+  <meta name="twitter:image" content="images/icon/DR.png">
+  <meta name="twitter:image:alt" content="Dalox Color Tools">
+  <meta name="twitter:site" content="@dalox_design">
+  <meta name="twitter:creator" content="@dalox_design">
+
+  <!-- ================== SEO 및 사용자 경험 보완 태그 ================== -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="language" content="ko">
+  <meta name="distribution" content="global">
+  <meta name="rating" content="general">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="canonical" href="https://dalox.design/index.html">
+
+  <!-- ================== 웹앱 및 브라우저 최적화 ================== -->
+  <meta name="theme-color" content="#000000">
+  <meta name="application-name" content="Dalox">
+  <meta name="msapplication-TileColor" content="#000000">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Dalox">
+
+  <!-- ================== 아이콘 및 리소스 링크 ================== -->
+  <link rel="icon" href="images/icon/DR.png" type="image/png">
+  <link rel="apple-touch-icon" href="images/icon/DR.png">
+  <link rel="manifest" href="site.webmanifest">
+
+
+<body>
+
+  <!-- ========== Header ========== -->
+  <header class="header">
+    <div class="header__container">
+      <a href="index.html" class="header__logo">DALOX</a>
+      <nav class="header__nav">
+        <a href="subpage/generator.html" class="header__link">Generator</a>
+        <a href="subpage/image-analyzer.html" class="header__link">Image Analyzer</a>
+        <a href="subpage/color-library.html" class="header__link">Color Spectrum</a>
+        <a href="subpage/color-combinations.html" class="header__link">Color Combinations</a>
+        <a href="subpage/ui-preview.html" class="header__link">UI Preview</a>
+      </nav>
+      <button class="header__menu-toggle" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ========== Mobile Menu ========== -->
+  <div class="mobile-menu">
+    <nav class="mobile-menu__nav">
+      <a href="subpage/generator.html" class="mobile-menu__link">Generator</a>
+      <a href="subpage/image-analyzer.html" class="mobile-menu__link">Image Analyzer</a>
+      <a href="subpage/color-library.html" class="mobile-menu__link">Color Spectrum</a>
+      <a href="subpage/color-combinations.html" class="mobile-menu__link">Color Combinations</a>
+      <a href="subpage/ui-preview.html" class="mobile-menu__link">UI Preview</a>
+    </nav>
+  </div>
+
+  <!-- ========== Hero ========== -->
+  <section class="hero">
+    <div class="hero__container">
+      <h1 class="hero__title">
+        <span class="hero__title-line">Dalox Perfect</span>
+        <span class="hero__title-line hero__title-line--accent">Color Palettes</span>
+      </h1>
+      <div class="hero__actions">
+        <a href="subpage/generator.html" class="btn btn--primary">Start Creating</a>
+      </div>
+    </div>
+
+    <!-- Animated Color Bars -->
+    <div class="hero__visual">
+      <div class="color-bar color-bar--1"></div>
+      <div class="color-bar color-bar--2"></div>
+      <div class="color-bar color-bar--3"></div>
+      <div class="color-bar color-bar--4"></div>
+      <div class="color-bar color-bar--5"></div>
+    </div>
+  </section>
+
+
+  <!-- ========== CTA ========== -->
+   
+  <section class="cta">
+    <div class="cta__container">
+      <div class="cta__content">
+        <h2 class="cta__title">Start Creating</h2>
+        <p class="cta__subtitle">Transform your design process with powerful color tools</p>
+        <a href="subpage/generator.html" class="btn btn--large cta__btn">
+          <span class="btn-text">Get Started</span>
+          <span class="btn-icon">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== Footer ========== -->
+  <footer class="footer">
+    <div class="footer__container">
+      <div class="footer__content">
+        <div class="footer__brand">
+          <a href="index.html" class="footer__logo">DALOX</a>
+          <p class="footer__tagline">Modern color tools for creators</p>
+        </div>
+        <div class="footer__links">
+          <a href="subpage/generator.html" class="footer__link">Generator</a>
+          <a href="subpage/image-analyzer.html" class="footer__link">Image Analyzer</a>
+          <a href="subpage/color-library.html" class="footer__link">Color Spectrum</a>
+          <a href="subpage/color-combinations.html" class="footer__link">Color Combinations</a>
+          <a href="subpage/ui-preview.html" class="footer__link">UI Preview</a>
+        </div>
+        <div class="footer__legal">
+          <div class="legal-menu">
+            <button class="legal-menu__trigger" id="legalTrigger" aria-label="Legal Menu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+            <div class="legal-menu__dropdown">
+              <a href="#" class="legal-menu__link" id="privacyBtn">Privacy Policy</a>
+              <a href="#" class="legal-menu__link" id="termsBtn">Terms of Use</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="footer__copyright">&copy; 2026 DALOX. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+  <script src="js/legal-modal.js"></script>
+</body>
+
+</html>
