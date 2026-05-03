@@ -33,10 +33,20 @@
 }
 
 .header__logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
   font-size: 1.5rem;
   font-weight: 700;
   letter-spacing: -0.5px;
   color: var(--text-primary);
+}
+
+.header__logo-img {
+  width: 32px;
+  height: 32px;
+  margin: 0;
+  object-fit: contain;
 }
 
 .header__nav {
