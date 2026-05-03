@@ -168,3 +168,84 @@ button {
   margin: 40px 0;
   opacity: 0.5;
 }
+
+/* ========== Page Ads ========== */
+.page-ad {
+  width: 100%;
+  max-width: 340px;
+  margin: 32px auto;
+}
+
+.page-ad-top {
+  margin-top: 32px;
+}
+
+.page-ad-bottom {
+  margin-bottom: 48px;
+}
+
+@media (max-width: 1200px) {
+  .page-ad {
+    max-width: 100%;
+  }
+}
+
+.page-top {
+  position: relative;
+  width: min(100%, var(--container-max));
+  margin: 0 auto 48px;
+  padding: 0 40px;
+}
+
+.page-top__content {
+  max-width: 820px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.page-ad-right {
+  position: absolute;
+  top: -80px;
+  right: -100px;
+}
+
+.page-ad-right--analyzer {
+  right: -400px;
+}
+
+.ui-preview .page-ad-right {
+  top: -100px;
+  right: -50px;
+}
+
+@media (max-width: 1200px) {
+  .page-top {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 24px;
+    padding: 0 24px;
+  }
+
+  .page-top__content {
+    width: 100%;
+  }
+
+  .page-ad-right {
+    position: static;
+    margin: 0 auto;
+    max-width: 100%;
+    right: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-top {
+    padding: 0 20px;
+  }
+
+  .page-ad-right {
+    margin: 24px auto 0;
+    max-width: 100%;
+  }
+}

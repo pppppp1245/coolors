@@ -23,7 +23,7 @@
   background: rgba(10, 10, 10, 0.8);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  z-index: 1100;
+  z-index: 1000;
   border-bottom: 1px solid var(--border);
   transition: all var(--transition-base);
 }
@@ -119,7 +119,6 @@
   background: var(--bg-primary);
   z-index: 999;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   opacity: 0;
@@ -130,22 +129,6 @@
 .mobile-menu.active {
   opacity: 1;
   visibility: visible;
-}
-
-.mobile-menu__brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.75rem;
-  margin-bottom: 48px;
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: var(--text-primary);
-}
-
-.mobile-menu__brand-img {
-  width: 32px;
-  height: 32px;
-  object-fit: contain;
 }
 
 .mobile-menu__nav {
@@ -274,6 +257,79 @@
   flex: 1;
   height: 100%;
   transform-origin: bottom;
+}
+
+.hero__inner {
+  position: relative;
+  width: min(100%, var(--container-max));
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.hero__ad,
+.page-ad {
+  width: 100%;
+  max-width: 340px;
+}
+
+.hero__ad {
+  position: absolute;
+  top: -50px;
+  right: -100px;
+}
+
+.page-ad {
+  margin: 32px auto;
+}
+
+.page-ad-top {
+  margin-top: 32px;
+}
+
+.page-ad-bottom {
+  margin-bottom: 48px;
+}
+
+@media (max-width: 1200px) {
+  .hero__inner {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 24px;
+  }
+/* 
+  .hero__ad,
+  .page-ad {
+    position: static;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+  } */
+     .hero__visual {
+    display: none;
+  }
+
+  .hero__ad,
+  .page-ad {
+    width: 100%;
+    max-width: 100%;
+    margin: 24px auto;
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero__visual {
+    display: none;
+  }
+
+  .hero__ad,
+  .page-ad {
+    width: 100%;
+    max-width: 100%;
+    margin: 24px auto;
+    position: static;
+  }
 }
 
 .color-bar--1 { background: linear-gradient(180deg, #667eea 0%, #764ba2 100%); }
@@ -762,9 +818,9 @@
     letter-spacing: 0.5px;
   }
 
-  .hero__actions {
+  /* .hero__actions {
     flex-direction: column;
-  }
+  } */
 
   .hero__actions .btn {
     width: 100%;
