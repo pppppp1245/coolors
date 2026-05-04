@@ -846,6 +846,10 @@
     max-width: 280px;
   }
 
+  .footer-ad {
+    display: none;
+  }
+
   .footer__content {
     flex-direction: column;
     gap: 32px;

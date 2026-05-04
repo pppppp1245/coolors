@@ -164,7 +164,7 @@
 /* ========== Color Combinations Main ========== */
 .color-combinations {
   min-height: 100vh;
-  padding-top: calc(var(--header-height) + 80px);
+  padding-top: calc(var(--header-height) + 20px);
   padding-bottom: 80px;
 }
 

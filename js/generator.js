@@ -62,7 +62,7 @@ function generatePalette() {
     if (locked[index]) return color;
     return generateRandomColor();
   });
-  
+
   updatePalette();
 }
 
@@ -78,7 +78,7 @@ function updatePalette() {
 function toggleLock(index) {
   locked[index] = !locked[index];
   lockButtons[index].classList.toggle('locked', locked[index]);
-  
+
   // Animate lock icon
   gsap.to(lockButtons[index].querySelector('.palette__lock-icon'), {
     scale: locked[index] ? 1.2 : 1,
@@ -100,7 +100,7 @@ function copyToClipboard(text) {
 function copyAllColors() {
   const allColors = colors.join('\n');
   copyToClipboard(allColors);
-  
+
   // Button feedback
   const originalText = copyAllBtn.textContent;
   copyAllBtn.textContent = 'Copied!';
@@ -110,7 +110,7 @@ function copyAllColors() {
     yoyo: true,
     repeat: 1
   });
-  
+
   setTimeout(() => {
     copyAllBtn.textContent = originalText;
   }, 1000);
@@ -119,18 +119,18 @@ function copyAllColors() {
 // Copy Single Color
 function copySingleColor(index) {
   copyToClipboard(colors[index]);
-  
+
   const hexEl = hexElements[index];
   const originalText = hexEl.textContent;
   hexEl.textContent = 'Copied!';
-  
+
   gsap.to(hexEl, {
     scale: 1.1,
     duration: 0.1,
     yoyo: true,
     repeat: 1
   });
-  
+
   setTimeout(() => {
     hexEl.textContent = originalText;
   }, 1000);
@@ -143,23 +143,15 @@ function init() {
     colors.push(generateRandomColor());
   }
   updatePalette();
-  
-  // Animate initial load
-  gsap.from(colorElements, {
-    opacity: 0,
-    y: 50,
-    stagger: 0.1,
-    duration: 0.6,
-    ease: 'power3.out'
-  });
-  
+
+  // Animate initial load (Header only)
   gsap.from('.generator__header', {
     opacity: 0,
     y: 30,
     duration: 0.6,
     ease: 'power3.out'
   });
-  
+
   gsap.from('.actions', {
     opacity: 0,
     y: 30,
@@ -185,17 +177,6 @@ colorElements.forEach((el, index) => {
 
 generateBtn.addEventListener('click', () => {
   generatePalette();
-  
-  // Animate color change
-  colorElements.forEach((el, index) => {
-    if (!locked[index]) {
-      gsap.from(el, {
-        opacity: 0.5,
-        duration: 0.3,
-        ease: 'power2.out'
-      });
-    }
-  });
 });
 
 copyAllBtn.addEventListener('click', copyAllColors);
@@ -205,17 +186,6 @@ document.addEventListener('keydown', (e) => {
   if (e.code === 'Space' && e.target.tagName !== 'INPUT') {
     e.preventDefault();
     generatePalette();
-    
-    // Animate color change
-    colorElements.forEach((el, index) => {
-      if (!locked[index]) {
-        gsap.from(el, {
-          opacity: 0.5,
-          duration: 0.3,
-          ease: 'power2.out'
-        });
-      }
-    });
   }
 });
 
