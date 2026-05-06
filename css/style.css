@@ -846,8 +846,9 @@
     max-width: 280px;
   }
 
-  .footer-ad {
-    display: none;
+  .footer-ad,
+  .top-ad {
+    display: none !important;
   }
 
   .footer__content {

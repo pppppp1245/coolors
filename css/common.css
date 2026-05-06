@@ -261,3 +261,26 @@ button {
     max-width: 100%;
   }
 }
+
+/* Hide 728x90 ads on mobile devices */
+@media (max-width: 728px) {
+  .footer-ad,
+  .top-ad {
+    display: none !important;
+  }
+}
+
+/* Mobile Kakao Ad (320x480) */
+.mobile-kakao-ad {
+  display: none;
+  width: 100%;
+  max-width: 320px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+@media (max-width: 728px) {
+  .mobile-kakao-ad {
+    display: block;
+  }
+}
