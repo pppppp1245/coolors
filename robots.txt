@@ -1,0 +1,15 @@
+# ========================================
+# Dalox - Color Palette Tool for Designers
+# https://dalox.design
+# ========================================
+
+# Allow all search engine crawlers (Google, Bing, Naver, Yahoo, DuckDuckGo, Yandex, etc.)
+User-agent: *
+
+# Allow crawling of all pages and directories
+Disallow:
+
+# ========================================
+# Sitemap Location
+# ========================================
+Sitemap: https://dalox.design/sitemap.xml
