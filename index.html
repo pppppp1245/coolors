@@ -1,66 +1,143 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dalox</title>
-  <meta name="description" content="Dalox">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Dalox | color palette</title>
+  <meta name="description"
+    content="Dalox는 감성 톤의 컬러조합과 컬러 팔레트 추천을 돕는 웹 도구입니다. 브랜드 네임 무드에 맞는 팔레트, color palette와 brand color 실험을 Generator·이미지 분석으로 빠르게 진행하세요.">
+
+  <link rel="canonical" href="https://dalox.design/">
+  <link rel="alternate" hreflang="ko-KR" href="https://dalox.design/">
+  <link rel="alternate" hreflang="en" href="https://dalox.design/">
+  <link rel="alternate" hreflang="x-default" href="https://dalox.design/">
+
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="author" content="Dalox">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="color-scheme" content="dark">
 
   <!-- CSS -->
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/style.css">
 
   <!-- Chillax Font -->
+  <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
   <link href="https://api.fontshare.com/v2/css?f[]=chillax@300,400,500,600,700&display=swap" rel="stylesheet">
 
   <!-- GSAP -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  <!-- ================== 기본 메타 태그 (SEO) ================== -->
-  <meta name="title" content="Dalox">
-  <meta name="author" content="Dalox">
-  <meta name="robots" content="index, follow">
 
-  <!-- ================== Open Graph 메타 태그 (SNS 공유) ================== -->
-  <meta property="og:title" content="Dalox">
-  <meta property="og:description" content="Dalox">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Dalox | 감성 컬러·브랜드 컬러 조합과 컬러 팔레트">
+  <meta property="og:description"
+    content="감성 브랜드 톤과 컬러조합을 빠르게 실험하세요. 컬러 팔레트 추천, color palette·brand color 워크플로를 한 화면에서.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://dalox.design/index.html">
+  <meta property="og:url" content="https://dalox.design/">
   <meta property="og:image" content="https://daloxcolors.netlify.app/images/DL.webp">
+  <meta property="og:image:secure_url" content="https://daloxcolors.netlify.app/images/DL.webp">
+  <meta property="og:image:type" content="image/webp">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Dalox">
+  <meta property="og:image:alt" content="Dalox — 감성 컬러와 컬러 팔레트 도구">
   <meta property="og:site_name" content="Dalox">
   <meta property="og:locale" content="ko_KR">
+  <meta property="og:locale:alternate" content="en_US">
 
-  <!-- ================== Twitter 카드 메타 태그 ================== -->
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Dalox">
-  <meta name="twitter:description" content="Dalox">
+  <meta name="twitter:title" content="Dalox | 감성 컬러·브랜드 컬러 조합과 컬러 팔레트">
+  <meta name="twitter:description"
+    content="감성 브랜드 톤과 컬러조합을 빠르게 실험하세요. 컬러 팔레트 추천, color palette·brand color 워크플로를 한 화면에서.">
   <meta name="twitter:image" content="https://daloxcolors.netlify.app/images/DL.webp">
-  <meta name="twitter:image:alt" content="Dalox">
+  <meta name="twitter:image:alt" content="Dalox — 감성 컬러와 컬러 팔레트 도구">
   <meta name="twitter:site" content="@dalox_design">
   <meta name="twitter:creator" content="@dalox_design">
 
-  <!-- ================== SEO 및 사용자 경험 보완 태그 ================== -->
-  <meta name="language" content="ko">
-  <meta name="distribution" content="global">
-  <meta name="rating" content="general">
-  <meta name="format-detection" content="telephone=no">
-  <link rel="canonical" href="https://dalox.design/index.html">
-
-  <!-- ================== 웹 앱 및 브라우저 최적화 ================== -->
-  <meta name="theme-color" content="#000000">
+  <!-- Web app -->
+  <meta name="theme-color" content="#0A0A0A">
   <meta name="application-name" content="Dalox">
   <meta name="msapplication-TileColor" content="#000000">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-title" content="Dalox">
+  <meta name="mobile-web-app-capable" content="yes">
 
-  <!-- ================== 아이콘 및 리소스 링크 ================== -->
+  <!-- Icons -->
   <link rel="icon" href="images/icon/DR.png" type="image/png">
   <link rel="apple-touch-icon" href="images/icon/DR.png">
   <link rel="manifest" href="site.webmanifest">
+
+  <!-- Search console (single ownership token) -->
+  <meta name="google-site-verification" content="UeWX7ihgfwgP8Wfy9fZ2CbHl2X-Lqilxy8kJWDt629I">
+  <meta name="naver-site-verification" content="16c2644378dd7f905e96d244b4a2c78f9ebf5eb8">
+  <meta name="msvalidate.01" content="13E1941B63F118BF1E57B95D2C6B0FD9">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://dalox.design/#website",
+        "url": "https://dalox.design/",
+        "name": "Dalox",
+        "description": "감성 컬러와 브랜드 컬러 조합, 컬러 팔레트 추천을 위한 웹 도구. color palette·brand name 무드 탐색.",
+        "inLanguage": ["ko-KR", "en"],
+        "publisher": { "@id": "https://dalox.design/#organization" }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://dalox.design/#organization",
+        "name": "Dalox",
+        "url": "https://dalox.design/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://dalox.design/images/icon/DR.png"
+        },
+        "sameAs": ["https://twitter.com/dalox_design"]
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://dalox.design/#webpage",
+        "url": "https://dalox.design/",
+        "name": "Dalox | 감성 컬러·브랜드 컬러 조합과 컬러 팔레트",
+        "description": "Dalox는 감성 톤의 컬러조합과 컬러 팔레트 추천을 돕는 웹 도구입니다. 브랜드 네임 무드에 맞는 팔레트, color palette와 brand color 실험을 Generator·이미지 분석으로 빠르게 진행하세요.",
+        "inLanguage": "ko-KR",
+        "isPartOf": { "@id": "https://dalox.design/#website" },
+        "about": [
+          { "@type": "Thing", "name": "컬러조합" },
+          { "@type": "Thing", "name": "컬러 팔레트" },
+          { "@type": "Thing", "name": "brand color" },
+          { "@type": "Thing", "name": "color palette" }
+        ],
+        "primaryImageOfPage": {
+          "@type": "ImageObject",
+          "url": "https://daloxcolors.netlify.app/images/DL.webp"
+        }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://dalox.design/#app",
+        "name": "Dalox",
+        "applicationCategory": "DesignApplication",
+        "operatingSystem": "Web",
+        "url": "https://dalox.design/",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "KRW"
+        },
+        "description": "컬러조합·컬러 팔레트 추천, 감성 브랜드 네임 톤과 브랜드 컬러 조합을 실험하는 color palette 도구 모음.",
+        "inLanguage": ["ko-KR", "en"],
+        "publisher": { "@id": "https://dalox.design/#organization" }
+      }
+    ]
+  }
+  </script>
   <meta name="google-site-verification" content="UeWX7ihgfwgP8Wfy9fZ2CbHl2X-Lqilxy8kJWDt629I" />
   <meta name="naver-site-verification" content="16c2644378dd7f905e96d244b4a2c78f9ebf5eb8" />
   <meta name="msvalidate.01" content="13E1941B63F118BF1E57B95D2C6B0FD9" />
@@ -68,22 +145,25 @@
 </head>
 
 <body>
+  <noscript>
+    Dalox는 감성 컬러·브랜드 컬러 조합과 컬러 팔레트 추천을 위한 웹 도구입니다. color palette와 brand color 실험은 JavaScript 활성화 후 이용할 수 있습니다.
+  </noscript>
 
   <!-- ========== Header ========== -->
   <header class="header">
     <div class="header__container">
-      <a href="index.html" class="header__logo">
-        <img src="images/icon/DR.png" alt="Dalox Logo" class="header__logo-img">
+      <a href="/" class="header__logo">
+        <img src="images/icon/DR.png" alt="Dalox 로고" class="header__logo-img" decoding="async">
         DALOX
       </a>
-      <nav class="header__nav">
+      <nav class="header__nav" aria-label="주요 메뉴">
         <a href="subpage/generator.html" class="header__link">Generator</a>
         <a href="subpage/image-analyzer.html" class="header__link">Image Analyzer</a>
         <a href="subpage/color-library.html" class="header__link">Color Spectrum</a>
         <a href="subpage/color-combinations.html" class="header__link">Color Combinations</a>
         <a href="subpage/ui-preview.html" class="header__link">UI Preview</a>
       </nav>
-      <button class="header__menu-toggle" aria-label="Menu">
+      <button type="button" class="header__menu-toggle" aria-label="모바일 메뉴">
         <span></span>
         <span></span>
         <span></span>
@@ -93,7 +173,7 @@
 
   <!-- ========== Mobile Menu ========== -->
   <div class="mobile-menu">
-    <nav class="mobile-menu__nav">
+    <nav class="mobile-menu__nav" aria-label="모바일 메뉴">
       <a href="subpage/generator.html" class="mobile-menu__link">Generator</a>
       <a href="subpage/image-analyzer.html" class="mobile-menu__link">Image Analyzer</a>
       <a href="subpage/color-library.html" class="mobile-menu__link">Color Spectrum</a>
@@ -102,63 +182,69 @@
     </nav>
   </div>
 
-  <!-- ========== Hero ========== -->
-  <section class="hero">
-    <div class="hero__inner">
-      <div class="hero__container">
-        <h1 class="hero__title">
-          <span class="hero__title-line">Dalox Perfect</span>
-          <span class="hero__title-line hero__title-line--accent">Color Palettes</span>
-        </h1>
-        <div class="hero__actions">
-          <a href="subpage/generator.html" class="btn btn--primary">Start Creating</a>
+  <main id="main-content">
+    <!-- ========== Hero ========== -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <p class="sr-only">
+        Dalox는 디자이너와 크리에이터를 위한 감성 컬러 도구입니다.
+        컬러조합을 탐색하고 컬러 팔레트 추천을 받을 수 있으며, 컬러팔래트로도 많이 찾는 팔레트 주제를 다룹니다.
+        감성 브랜드 네임에 맞는 톤과 브랜드 컬러 조합을 시각적으로 비교할 수 있고, 영문으로는 color palette와 brand color 워크플로를 지원합니다.
+      </p>
+      <div class="hero__inner">
+        <div class="hero__container">
+          <h1 id="hero-heading" class="hero__title">
+            <span class="hero__title-line">Dalox Perfect</span>
+            <span class="hero__title-line hero__title-line--accent">Color Palettes</span>
+          </h1>
+          <div class="hero__actions">
+            <a href="subpage/generator.html" class="btn btn--primary">Start Creating</a>
+          </div>
+
+          <aside class="hero__ad" aria-label="스폰서 광고">
+            <ins class="kakao_ad_area" style="display:none;" data-ad-unit="DAN-qGwkuxRgX5ox0gaP" data-ad-width="300"
+              data-ad-height="250"></ins>
+            <script src="//t1.kakaocdn.net/kas/static/ba.min.js" async></script>
+          </aside>
         </div>
-
-        <aside class="hero__ad">
-          <ins class="kakao_ad_area" style="display:none;" data-ad-unit = "DAN-qGwkuxRgX5ox0gaP" data-ad-width = "300" data-ad-height = "250"></ins>
-          <script type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js" async></script>
-        </aside>
       </div>
-    </div>
 
-    <!-- Animated Color Bars -->
-    <div class="hero__visual">
-      <div class="color-bar color-bar--1"></div>
-      <div class="color-bar color-bar--2"></div>
-      <div class="color-bar color-bar--3"></div>
-      <div class="color-bar color-bar--4"></div>
-      <div class="color-bar color-bar--5"></div>
-    </div>
-  </section>
-
-
-  <!-- ========== CTA ========== -->
-  <section class="cta">
-    <div class="cta__container">
-      <div class="cta__content">
-        <h2 class="cta__title">Start Creating</h2>
-        <p class="cta__subtitle">Transform your design process with powerful color tools</p>
-        <a href="subpage/generator.html" class="btn btn--large cta__btn">
-          <span class="btn-text">Get Started</span>
-          <span class="btn-icon">→</span>
-        </a>
+      <!-- Animated Color Bars -->
+      <div class="hero__visual" role="presentation" aria-hidden="true">
+        <div class="color-bar color-bar--1"></div>
+        <div class="color-bar color-bar--2"></div>
+        <div class="color-bar color-bar--3"></div>
+        <div class="color-bar color-bar--4"></div>
+        <div class="color-bar color-bar--5"></div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- ========== CTA ========== -->
+    <section class="cta" aria-labelledby="cta-heading">
+      <div class="cta__container">
+        <div class="cta__content">
+          <h2 id="cta-heading" class="cta__title">Start Creating</h2>
+          <p class="cta__subtitle">Transform your design process with powerful color tools</p>
+          <a href="subpage/generator.html" class="btn btn--large cta__btn">
+            <span class="btn-text">Get Started</span>
+            <span class="btn-icon" aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <!-- ========== Footer Ad ========== -->
-  <section class="footer-ad">
-    <ins class="kakao_ad_area" style="display:none;" data-ad-unit = "DAN-QYOWmBQro1NHoXYp" data-ad-width = "728" data-ad-height = "90"></ins>
-    <script type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js" async></script>
+  <section class="footer-ad" aria-label="스폰서 광고">
+    <ins class="kakao_ad_area" style="display:none;" data-ad-unit="DAN-QYOWmBQro1NHoXYp" data-ad-width="728"
+      data-ad-height="90"></ins>
+    <script src="//t1.kakaocdn.net/kas/static/ba.min.js" async></script>
   </section>
 
   <!-- Mobile Kakao Ad -->
-  <div class="mobile-kakao-ad">
-    <ins class="kakao_ad_area" style="display:none;"
-    data-ad-unit = "DAN-i9C7LR48GvH7CioF"
-    data-ad-width = "320"
-    data-ad-height = "480"></ins>
-    <script type="text/javascript" src="//t1.kakaocdn.net/kas/static/ba.min.js" async></script>
+  <div class="mobile-kakao-ad" aria-label="모바일 스폰서 광고">
+    <ins class="kakao_ad_area" style="display:none;" data-ad-unit="DAN-i9C7LR48GvH7CioF" data-ad-width="320"
+      data-ad-height="480"></ins>
+    <script src="//t1.kakaocdn.net/kas/static/ba.min.js" async></script>
   </div>
 
   <!-- ========== Footer ========== -->
@@ -166,19 +252,19 @@
     <div class="footer__container">
       <div class="footer__content">
         <div class="footer__brand">
-          <a href="index.html" class="footer__logo">DALOX</a>
+          <a href="/" class="footer__logo">DALOX</a>
           <p class="footer__tagline">Modern color tools for creators</p>
         </div>
-        <div class="footer__links">
+        <nav class="footer__links" aria-label="푸터 링크">
           <a href="subpage/generator.html" class="footer__link">Generator</a>
           <a href="subpage/image-analyzer.html" class="footer__link">Image Analyzer</a>
           <a href="subpage/color-library.html" class="footer__link">Color Spectrum</a>
           <a href="subpage/color-combinations.html" class="footer__link">Color Combinations</a>
           <a href="subpage/ui-preview.html" class="footer__link">UI Preview</a>
-        </div>
+        </nav>
         <div class="footer__legal">
           <div class="legal-menu">
-            <button class="legal-menu__trigger" id="legalTrigger" aria-label="Legal Menu">
+            <button type="button" class="legal-menu__trigger" id="legalTrigger" aria-label="법적 고지 메뉴">
               <span></span>
               <span></span>
               <span></span>
